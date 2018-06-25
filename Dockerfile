@@ -12,3 +12,5 @@ RUN docker-php-ext-install -j$(nproc) gd
 ENV APACHE_LOG_DIR /var/log/apache2
 
 COPY apache.conf /etc/apache2/sites-enabled/000-default.conf
+
+ENTRYPOINT [/bin/sh', '-c', 'bash']
